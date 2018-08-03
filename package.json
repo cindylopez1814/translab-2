@@ -1,0 +1,15 @@
+{
+  "name": "translab",
+  "version": "1.0.0",
+  "description": "app tarjta bip",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "validador",
+    "bip"
+  ],
+  "author": "cindy lopez",
+  "license": "ISC"
+}
