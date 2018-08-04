@@ -4,39 +4,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to Firebase Hosting</title>
+  <title>TransLab</title>
 
-  <!-- update the version number as needed -->
-  <script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/5.3.0/firebase-auth.js"></script>
-  <script defer src="/__/firebase/5.3.0/firebase-database.js"></script>
-  <script defer src="/__/firebase/5.3.0/firebase-messaging.js"></script>
-  <script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
-  <!-- initialize the SDK after all desired features are loaded -->
-  <script defer src="/__/firebase/init.js"></script>
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="../src/css/style.css">
-
-
-
-
 </head>
 
 <body>
+  <div class="">
+    <div id="firstScreen">
+      <div class="divLogo">
+        <img src="../src/docs/imagen.png" class="rounded mx-auto d-block" alt="logo" id="logo">
+        <h1>TRANS-LAB</h1>
+      </div>
+      <div class="login">
+        <div class="input-group">
+          <div class="input-group-append">
+            <span class="input-group-text" id="">
+              <i class="far fa-user"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Correo Electronico" id="loginUser" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group">
+          <div class="input-group-append">
+            <span class="input-group-text" id="">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+          <input type="password" class="form-control" placeholder="Contraseña" id="loginPass" aria-label="Password" aria-describedby="basic-addon2">
+        </div>
+        <button class="btnLogin" id="btnLogin">INICIAR SESIÓN</button>
+        <p>¿Olvidaste tu contraseña?</p>
+      </div>
+      <footer>
+        <h6>¿NO TIENES CUENTA?</h6>
+        <a href="#">REGÍSTRATE</a>
+      </footer>
+    </div>
 
+    <div class="pos-f-t d-none">
+      <!-- Creando Navbar Side Menú, se borra div class="collapse" -->
+      <nav class="navbar navbar-dark bg-dark">
+        <!--Borrar data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"-->
+        <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <!-- Vertical Navs dentro de un div-->
+      <!-- no colocamos ni container ni section por que queremos que el navbar cubra toda la pantalla, sino tendria un margen -->
+      <!--Borrar   <li class="nav-item"> -->
+      <nav id="sideMenu" class="nav flex-column float-left menu bg-dark menu_closed">
+        <!-- d-none aparece en display property en bootstrap, sirve para que inicialmente el sideMenu este oculto -->
+        <!-- se agrega bg-dark para dar color negro al menu-->
+        <!-- Con float-left hacemos que flote hacia la izquierda -->
+        <div onclick="toggleMenu()" class="close_button">
+          <span aria-hidden="true">&times;</span>
+        </div>
+        <div class="menu_content">
+          <!--menu_content para separar el menu del botón x-->
+          <a class="nav-link active" href="#">Active</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCeee3EL_3hRUmPal8AhoPoxJa0zbKQg5w",
+      authDomain: "translab-53dbf.firebaseapp.com",
+      databaseURL: "https://translab-53dbf.firebaseio.com",
+      projectId: "translab-53dbf",
+      storageBucket: "translab-53dbf.appspot.com",
+      messagingSenderId: "1079285060989"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script>
-
-  </script>
+  <script src="../src/js/calculate.js"></script>
+  <script src="../src/js/login.js"></script>
+  <script src="../src/js/main.js"></script>
+  <script src="../src/js/profile.js"></script>
+  <script src="../src/js/auth.js"></script>
 </body>
 
 </html>
