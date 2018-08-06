@@ -215,6 +215,36 @@ body{
   padding: 2%;
 }
 
+#newCardNumber{
+  padding-top: 10%;
+  width: 85%;
+  font-size: 12px;
+  margin: 5% 7%;
+  background-color: #DDDEE0;
+  color: #A8A8AA;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #A8A8AA;
+}
+
+#selectCard{
+  height: 5vh;
+  width: 85%;
+  margin: 5% 7%;
+   border: none;
+}
+
+#btnBalance{
+  width: 50%;
+  margin: 5% 23%;
+  border: none;
+  background-color: #F6A800;
+  color: #fff;
+  height: 6vh;
+}
+
+
 @media(min-width: 768px){ /* esta medida se encuentra en bootstrap-> overview-> responsive breakpoints */
   .menu{
       width: 20vw; /*El menú va a tomar este ancho con pantallas de 768px hacia arriba*/
