@@ -6,9 +6,9 @@ btnBalance.addEventListener('click', () => {
       newCardNumber.value = '';
       console.log(JSON.stringify(data));
       showBalance.innerHTML = `
-        <p>Saldo Total</p>
-        <p>${data['Saldo  tarjeta']}</p>
-        <p>N°${data['N&ordm; tarjeta bip! ']}</p>
+        <p class="title">Saldo Total</p>
+        <p class="saldoFinal">${data['Saldo  tarjeta']}</p>
+        <p class="idCard">N°${data['N&ordm; tarjeta bip! ']}</p>
       `;
     });
 });

@@ -12,11 +12,19 @@ function showInfoUser() {
     }); 
     // newCard.innerHTML += `<p>${}</p>`
   });
+  firebase.database().ref(`users/${newEmailKey}/cards`)
+    .limitToLast(8)
+    .on('child_added', (codeCard) => {
+      newCard.innerHTML += `
+        <p>${codeCard.val().cardUser}</p>
+      `;
+    })
 };
 
 firebase.database().ref('users')
-  .limitToLast(8)
+  .limitToLast(1)
   .on('child_added', (newUser) => {
     emailUser.innerHTML = `<p>${newUser.val().email}</p>`;
-    console.log(newUser.val().cards);
   });
+
+
