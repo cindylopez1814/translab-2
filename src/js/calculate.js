@@ -12,3 +12,4 @@ btnBalance.addEventListener('click', () => {
       `;
     });
 });
+

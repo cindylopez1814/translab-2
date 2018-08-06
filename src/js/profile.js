@@ -18,7 +18,10 @@ function showInfoUser() {
       newCard.innerHTML += `
         <p>${codeCard.val().cardUser}</p>
       `;
-    })
+      selectCard.innerHTML += `
+      <option id="${codeCard.val().cardUser}">${codeCard.val().cardUser}</option>
+      `;
+    }); 
 };
 
 firebase.database().ref('users')

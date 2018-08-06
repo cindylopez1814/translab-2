@@ -216,6 +216,7 @@ body{
 }
 
 #newCardNumber{
+  padding: 2%;
   width: 85%;
   font-size: 12px;
   margin: 15% 7% 5% 7%;
@@ -229,10 +230,12 @@ body{
 
 #newCard p {
   background-color: #fff;
-  color: #A8A8AA;
-  margin: 6% 10%;
+  color: #3E3F41;
+  margin: 3% 10%;
   height: 5vh;
   padding: 2%;
+  text-align: center;
+  padding: 1%;
 }
 
 #selectCard{
