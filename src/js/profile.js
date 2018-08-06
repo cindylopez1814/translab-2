@@ -5,6 +5,10 @@ function showEmail() {
     uid: currentUser.uid,
     email: currentUser.email
   });
-  emailUser.innerHTML = `<p>${newEmailKey.email}</p>`;
-  console.log(newEmailKey.uid)
 }; 
+
+firebase.database().ref('users')
+  .limitToLast(1)
+  .on('child_added', (newUser) => {
+    emailUser.innerHTML = `<p>${newUser.val().email}</p>`;
+  });

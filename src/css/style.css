@@ -178,7 +178,7 @@ body{
 }
 
 #emailUser{
-  height: 15vh;
+  height: 10vh;
 }
 
 #cardNumber{
@@ -204,6 +204,15 @@ body{
 #newCard{
   height: 22vh;
   overflow: scroll;
+}
+
+#emailUser p{
+  background-color: #fff;
+  color: #A8A8AA;
+  text-align: center;
+  margin: 6% 10%;
+  height: 7vh;
+  padding: 2%;
 }
 
 @media(min-width: 768px){ /* esta medida se encuentra en bootstrap-> overview-> responsive breakpoints */
