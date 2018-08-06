@@ -25,7 +25,19 @@ home.addEventListener('click', () => {
 });
 
 screenSaldo.addEventListener('click', () => {
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.add('d-none');
+  containerSaldo.classList.remove('d-none');
+});
 
+saldoBip.addEventListener('click', () => {
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.add('d-none');
+  containerSaldo.classList.remove('d-none');
 });
 
 screenCalculate.addEventListener('click', () => {
@@ -37,7 +49,16 @@ screenProfile.addEventListener('click', () => {
   sideMenu.classList.add('menu_closed');
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.remove('d-none');
-  showEmail();
+  containerSaldo.classList.add('d-none');
+  showInfoUser();
+});
+
+profileUser.addEventListener('click', () => {
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.remove('d-none');
+  showInfoUser();
 });
 
 screenQuestions.addEventListener('click', () => {
