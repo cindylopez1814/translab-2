@@ -31,7 +31,7 @@
               <i class="far fa-user"></i>
             </span>
           </div>
-          <input type="text" class="form-control" placeholder="Correo Electronico" id="loginUser" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="Correo Electronico" id="email" aria-label="Username" aria-describedby="basic-addon1">
         </div>
         <div class="input-group">
           <div class="input-group-append">
@@ -39,30 +39,65 @@
               <i class="fas fa-lock"></i>
             </span>
           </div>
-          <input type="password" class="form-control" placeholder="Contraseña" id="loginPass" aria-label="Password" aria-describedby="basic-addon2">
+          <input type="password" class="form-control" placeholder="Contraseña" id="password" aria-label="Password" aria-describedby="basic-addon2">
         </div>
         <button class="btnLogin" id="btnLogin">INICIAR SESIÓN</button>
         <p>¿Olvidaste tu contraseña?</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Regístrate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Email</p>
+                <div class="input-group-append">
+                  <span class="input-group-text" id="">
+                    <i class="far fa-user"></i>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Correo Electronico" id="loginUser" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <p>Contraseña</p>
+                <div class="input-group-append">
+                  <span class="input-group-text" id="">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                  <input type="password" class="form-control" placeholder="Contraseña" id="loginPass" aria-label="Password" aria-describedby="basic-addon2">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="registerNow" data-dismiss="modal">Registrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <footer>
         <h6>¿NO TIENES CUENTA?</h6>
-        <a href="#">REGÍSTRATE</a>
+        <a href="#" data-toggle="modal" data-target="#modalRegister">REGÍSTRATE</a>
       </footer>
     </div>
-
-    <div class="pos-f-t d-none">
+    <!-- Navbar -->
+    <div class="pos-f-t  d-none" id="menu">
       <!-- Creando Navbar Side Menú, se borra div class="collapse" -->
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark">
         <!--Borrar data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"-->
         <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <h5>TRANS-LAB</h5>
       </nav>
       <!-- Vertical Navs dentro de un div-->
       <!-- no colocamos ni container ni section por que queremos que el navbar cubra toda la pantalla, sino tendria un margen -->
       <!--Borrar   <li class="nav-item"> -->
-      <nav id="sideMenu" class="nav flex-column float-left menu bg-dark menu_closed">
+      <nav id="sideMenu" class="nav flex-column float-left menu  menu_closed">
         <!-- d-none aparece en display property en bootstrap, sirve para que inicialmente el sideMenu este oculto -->
         <!-- se agrega bg-dark para dar color negro al menu-->
         <!-- Con float-left hacemos que flote hacia la izquierda -->
@@ -71,15 +106,65 @@
         </div>
         <div class="menu_content">
           <!--menu_content para separar el menu del botón x-->
-          <a class="nav-link active" href="#">Active</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link active" href="#" id="home">
+            <span>
+              <i class="fas fa-home"></i>
+            </span>
+            HOME
+          </a>
+          <a class="nav-link" href="#" id="screenSaldo">
+            <span>
+              <i class="fas fa-dollar-sign"></i>
+            </span>
+            Ver saldo</a>
+          <a class="nav-link" href="#" id="screenCalculate">
+            <span>
+              <i class="fas fa-dollar-sign"></i>
+            </span>
+            Calcular tarifa</a>
+          <a class="nav-link" href="#" id="screenProfile">
+            <span>
+              <i class="far fa-user-circle"></i>
+            </span>
+            Perfil</a>
+          <a class="nav-link" href="#" id="screenQuestions">
+            <span>
+              <i class="far fa-question-circle"></i>
+            </span>
+            Preguntas frecuentes</a>
+          <a class="nav-link" href="#" id="logOut">
+            <span>
+              <i class="fas fa-sign-out-alt"></i>
+            </span>
+            Cerrar Sesión</a>
         </div>
       </nav>
     </div>
   </div>
 
+  <!-- Second -->
+  <div id="secondScreen" class="d-none">
+    <div class="munuBtn">
+      <button id="saldoBip"> VER SALDO</button>
+      <button id="calculateBip">CALCULAR TARIFA</button>
+      <button id="profileUser">PERFIL</button>
+      <button id="questions">PREGUNTAS FRECUENTES</button>
+    </div>
+  </div>
+
+  <!-- Perfil -->
+  <div id="containerProfile" class="d-none">
+    <div class="containerPic">
+      <img alt="user" class="mx-auto d-block" id="avatarPic" src="../src/docs/default-user.png">
+    </div>
+    <div>
+      <div id="emailUser"></div>
+      <input type="email" id="cardNumber" placeholder="número tarjeta">
+      <button id="addCard">AGREGAR TARJETA</button>
+      <div id="newCard">
+      </div>
+    </div>
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
   <script>
@@ -104,7 +189,6 @@
   <script src="../src/js/login.js"></script>
   <script src="../src/js/main.js"></script>
   <script src="../src/js/profile.js"></script>
-  <script src="../src/js/auth.js"></script>
 </body>
 
 </html>
