@@ -1,6 +1,7 @@
 btnBalance.addEventListener('click', () => {
   const inputTarjeta = newCardNumber.value;
-  fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${inputTarjeta}`)
+  const selectTarjeta = selectCard.value;
+  fetch(`https://www.psep.cl/api/Bip.php?&numberBip=${inputTarjeta}`)
     .then(response => response.json()
     ).then(data => {
       newCardNumber.value = '';

@@ -2,7 +2,7 @@ function showInfoUser() {
   const currentUser = firebase.auth().currentUser;
 
   const newEmailKey = firebase.database().ref().child('users').push().key;
-  firebase.database().ref(`users/${newEmailKey}`).set({
+  firebase.database().ref(`users/${newEmailKey}`).update({
     uid: currentUser.uid,
     email: currentUser.email,
   });
