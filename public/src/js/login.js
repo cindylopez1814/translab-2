@@ -24,6 +24,7 @@ function inicialize() {
     } else {
     // No estamos logueados esconder 'Cerrar Sesión'
       menu.classList.add('d-none');
+      containerCalculate.classList.add('d-none');
       containerProfile.classList.add('d-none');
       firstScreen.style.display = 'block';
     }

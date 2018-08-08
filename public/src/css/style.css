@@ -245,7 +245,7 @@ body{
    border: none;
 }
 
-#btnBalance{
+#btnBalance, #calculatePrice{
   width: 50%;
   margin: 5% 23%;
   border: none;
@@ -281,6 +281,31 @@ body{
   background-color: #F6A800;
   color: #3E3F41;
   font-size: 12px;
+}
+
+#calculateBipNum{
+  padding: 2%;
+  width: 85%;
+  font-size: 12px;
+  margin: 15% 7% 5% 7%;
+  background-color: #DDDEE0;
+  color: #A8A8AA;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #A8A8AA;
+}
+
+#containerCalculate #tarifas, #selectCardCalculate{
+  height: 5vh;
+  width: 45%;
+  margin: 5% 2%;
+  border: none;
+}
+
+.divSelect{
+  padding: 4%;
+  margin: 3%;
 }
 
 @media(min-width: 768px){ /* esta medida se encuentra en bootstrap-> overview-> responsive breakpoints */

@@ -22,6 +22,7 @@ home.addEventListener('click', () => {
   sideMenu.classList.add('menu_closed');
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.add('d-none');
+  containerCalculate.classList.add('d-none');
 });
 
 screenSaldo.addEventListener('click', () => {
@@ -30,6 +31,7 @@ screenSaldo.addEventListener('click', () => {
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.add('d-none');
   containerSaldo.classList.remove('d-none');
+  containerCalculate.classList.add('d-none');
 });
 
 saldoBip.addEventListener('click', () => {
@@ -38,10 +40,25 @@ saldoBip.addEventListener('click', () => {
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.add('d-none');
   containerSaldo.classList.remove('d-none');
+  containerCalculate.classList.add('d-none');
 });
 
 screenCalculate.addEventListener('click', () => {
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.add('d-none');
+  containerSaldo.classList.add('d-none');
+  containerCalculate.classList.remove('d-none');
+});
 
+calculateBip.addEventListener('click', () => {
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.add('d-none');
+  containerSaldo.classList.add('d-none');
+  containerCalculate.classList.remove('d-none');
 });
 
 screenProfile.addEventListener('click', () => {
@@ -50,6 +67,7 @@ screenProfile.addEventListener('click', () => {
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.remove('d-none');
   containerSaldo.classList.add('d-none');
+  containerCalculate.classList.add('d-none');
   showInfoUser();
 });
 
@@ -58,6 +76,7 @@ profileUser.addEventListener('click', () => {
   sideMenu.classList.add('menu_closed');
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.remove('d-none');
+  containerCalculate.classList.add('d-none');
   showInfoUser();
 });
 
