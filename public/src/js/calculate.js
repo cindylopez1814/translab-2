@@ -21,8 +21,8 @@ function showData(data) {
 tarifas.addEventListener('click', () => {
   let priceValue = tarifas[tarifas.selectedIndex].value;
   price.innerHTML = `
-  <p>Costo Pasaje</p>
-  <p>$ ${priceValue}</p>
+  <p class="title">Costo Pasaje</p>
+  <p class="saldoFinal">$ ${priceValue}</p>
   `;
 });
 
@@ -41,13 +41,13 @@ function dataCalculate() {
 function calculate(data) {
   const code = /(\d+)/g;
   const bipData = data.saldoTarjeta.match(code);
-  console.log(bipData)
+  console.log(bipData);
   const finalBipData = parseInt(bipData[0] + bipData[1]);
   console.log(finalBipData);
   const total = finalBipData - tarifas.value;
 
   saldoFinal.innerHTML = `
-  <p>Saldo Final</p>
-  <p>$ ${total}</p>
+  <p class="title">Saldo Final</p>
+  <p class="saldoFinal">$ ${total}</p>
   `;
 }

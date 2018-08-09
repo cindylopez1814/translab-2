@@ -26,6 +26,7 @@ function inicialize() {
       menu.classList.add('d-none');
       containerCalculate.classList.add('d-none');
       containerProfile.classList.add('d-none');
+      containerQuestion.classList.add('d-none');  
       firstScreen.style.display = 'block';
     }
   });

@@ -247,7 +247,7 @@ body{
 
 #btnBalance, #calculatePrice{
   width: 50%;
-  margin: 5% 23%;
+  margin: 2% 23%;
   border: none;
   background-color: #F6A800;
   color: #fff;
@@ -306,6 +306,37 @@ body{
 .divSelect{
   padding: 4%;
   margin: 3%;
+}
+
+#price, #saldoFinal{
+  text-align: center;
+  width: 80%;
+  margin: 7% 10%;
+}
+
+/* questions */
+
+.titleQuestion{
+  background-color: #F6A800;
+  color: #fff;
+  text-align: center;
+  padding: 15%;
+  height: 35vh;
+}
+
+.drop{
+  padding: 10%;
+}
+
+.drop button{
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0%;
+}
+
+.card{
+  position: inherit;
 }
 
 @media(min-width: 768px){ /* esta medida se encuentra en bootstrap-> overview-> responsive breakpoints */

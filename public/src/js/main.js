@@ -23,6 +23,7 @@ home.addEventListener('click', () => {
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.add('d-none');
   containerCalculate.classList.add('d-none');
+  containerQuestion.classList.add('d-none');
 });
 
 screenSaldo.addEventListener('click', () => {
@@ -32,6 +33,7 @@ screenSaldo.addEventListener('click', () => {
   containerProfile.classList.add('d-none');
   containerSaldo.classList.remove('d-none');
   containerCalculate.classList.add('d-none');
+  containerQuestion.classList.add('d-none');
 });
 
 saldoBip.addEventListener('click', () => {
@@ -41,6 +43,7 @@ saldoBip.addEventListener('click', () => {
   containerProfile.classList.add('d-none');
   containerSaldo.classList.remove('d-none');
   containerCalculate.classList.add('d-none');
+  containerQuestion.classList.add('d-none');
 });
 
 screenCalculate.addEventListener('click', () => {
@@ -49,7 +52,8 @@ screenCalculate.addEventListener('click', () => {
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.add('d-none');
   containerSaldo.classList.add('d-none');
-  containerCalculate.classList.remove('d-none');
+  containerCalculate.classList.remove('d-none');  
+  containerQuestion.classList.add('d-none');
 });
 
 calculateBip.addEventListener('click', () => {
@@ -59,6 +63,7 @@ calculateBip.addEventListener('click', () => {
   containerProfile.classList.add('d-none');
   containerSaldo.classList.add('d-none');
   containerCalculate.classList.remove('d-none');
+  containerQuestion.classList.add('d-none');
 });
 
 screenProfile.addEventListener('click', () => {
@@ -68,6 +73,8 @@ screenProfile.addEventListener('click', () => {
   containerProfile.classList.remove('d-none');
   containerSaldo.classList.add('d-none');
   containerCalculate.classList.add('d-none');
+  containerQuestion.classList.add('d-none');  
+
   showInfoUser();
 });
 
@@ -77,9 +84,27 @@ profileUser.addEventListener('click', () => {
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.remove('d-none');
   containerCalculate.classList.add('d-none');
+  containerQuestion.classList.add('d-none');  
+
   showInfoUser();
 });
 
 screenQuestions.addEventListener('click', () => {
+  containerQuestion.classList.remove('d-none');  
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.add('d-none');
+  containerSaldo.classList.add('d-none');
+  containerCalculate.classList.add('d-none');
+});
 
+questions.addEventListener('click', () => {
+  containerQuestion.classList.remove('d-none');  
+  secondScreen.classList.add('d-none');
+  sideMenu.classList.add('menu_closed');
+  sideMenu.classList.remove('menu_open');
+  containerProfile.classList.add('d-none');
+  containerSaldo.classList.add('d-none');
+  containerCalculate.classList.add('d-none');
 });
