@@ -22,6 +22,7 @@ home.addEventListener('click', () => {
   sideMenu.classList.add('menu_closed');
   sideMenu.classList.remove('menu_open');
   containerProfile.classList.add('d-none');
+  containerSaldo.classList.add('d-none');
   containerCalculate.classList.add('d-none');
   containerQuestion.classList.add('d-none');
 });
@@ -108,3 +109,10 @@ questions.addEventListener('click', () => {
   containerSaldo.classList.add('d-none');
   containerCalculate.classList.add('d-none');
 });
+
+function showCalculate(total) {
+  saldoFinal.innerHTML = `
+  <p class="title">Saldo Final</p>
+  <p class="saldoFinal">$ ${total}</p>
+  `;
+};

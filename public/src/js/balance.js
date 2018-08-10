@@ -46,8 +46,5 @@ function calculate(data) {
   console.log(finalBipData);
   const total = finalBipData - tarifas.value;
 
-  saldoFinal.innerHTML = `
-  <p class="title">Saldo Final</p>
-  <p class="saldoFinal">$ ${total}</p>
-  `;
+  showCalculate(total);
 }
